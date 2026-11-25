@@ -27,7 +27,6 @@ class OrdersRemoteDataSource {
   }
 
   AppException _mapError(DioException e) {
-  debugPrint('...Dio error: ${e.type} ${e.response?.statusCode} ${e.message}');
   return switch (e.type) {
     DioExceptionType.badResponse => ServerException(e.response?.statusCode),
     _ => const NetworkException(),
