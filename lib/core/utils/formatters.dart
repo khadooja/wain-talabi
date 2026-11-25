@@ -11,8 +11,10 @@ class Formatters {
   static final _date = DateFormat('d MMMM y', 'ar');
   static final _time = DateFormat('h:mm a', 'ar');
 
+  static String number(int value) => _amount.format(value);
+
   static String amount(int value) =>
-      '${_amount.format(value)} ${AppConstants.currencySymbol}';
+      '${number(value)} ${AppConstants.currencySymbol}';
 
   static String date(DateTime value) => _date.format(value.toLocal());
 
