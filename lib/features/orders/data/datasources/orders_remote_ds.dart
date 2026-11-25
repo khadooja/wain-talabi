@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
-
-import '../../../../core/constants/app_constants.dart';
-import '../../../../core/errors/app_exception.dart';
 import '../models/order_model.dart';
 import '../models/orders_codec.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import '../../../../core/errors/app_exception.dart';
+import '../../../../core/constants/app_constants.dart';
+
 
 /// يجلب الطلبات من الشبكة، ويحوّل أي خطأ لـ AppException.
 class OrdersRemoteDataSource {
@@ -24,10 +26,11 @@ class OrdersRemoteDataSource {
     }
   }
 
-  AppException _mapError(DioException e) => switch (e.type) {
-        DioExceptionType.badResponse =>
-          ServerException(e.response?.statusCode),
-        // انتهاء مهلة، لا اتصال، أو أي خطأ شبكة ثاني.
-        _ => const NetworkException(),
-      };
+  AppException _mapError(DioException e) {
+  debugPrint('...............................................................................................Dio error: ${e.type} ${e.response?.statusCode} ${e.message}');
+  return switch (e.type) {
+    DioExceptionType.badResponse => ServerException(e.response?.statusCode),
+    _ => const NetworkException(),
+  };
+}
 }
