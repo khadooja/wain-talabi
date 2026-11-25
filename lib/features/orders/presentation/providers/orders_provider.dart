@@ -1,11 +1,13 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../../core/providers/core_providers.dart';
+import '../../domain/entities/orders_snapshot.dart';
 import '../../data/datasources/orders_local_ds.dart';
 import '../../data/datasources/orders_remote_ds.dart';
-import '../../data/repositories/orders_repository_impl.dart';
-import '../../domain/entities/orders_snapshot.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../../core/providers/core_providers.dart';
 import '../../domain/repositories/orders_repository.dart';
+import 'package:wain_talabi/features/orders/data/repositories/orders_repository_impl.dart';
+
+
+
 
 /// ربط الـ Repository بمصادره. الشاشات ما تشوف هذا الكلام.
 final ordersRepositoryProvider = Provider<OrdersRepository>((ref) {
