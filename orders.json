@@ -1,0 +1,111 @@
+{
+  "orders": [
+    {
+      "id": "WS-10486",
+      "createdAt": "2026-11-25T08:40:00+03:00",
+      "total": 14500,
+      "status": "preparing",
+      "address": "صنعاء، شارع الستين، جوار مطعم الشيباني، عمارة 12، الدور الثاني",
+      "items": [
+        { "name": "مندي لحم", "quantity": 2, "unitPrice": 4500 },
+        { "name": "سلطة خضار", "quantity": 1, "unitPrice": 1500 },
+        { "name": "عصير ليمون بالنعناع", "quantity": 2, "unitPrice": 2000 }
+      ],
+      "stages": [
+        { "status": "received", "completedAt": "2026-11-25T08:40:00+03:00" },
+        { "status": "preparing", "completedAt": "2026-11-25T08:47:00+03:00" },
+        { "status": "onTheWay", "completedAt": null },
+        { "status": "delivered", "completedAt": null }
+      ]
+    },
+    {
+      "id": "WS-10481",
+      "createdAt": "2026-11-25T07:55:00+03:00",
+      "total": 9000,
+      "status": "onTheWay",
+      "address": "عدن، كريتر، شارع الملكة أروى، بجانب البنك الأهلي",
+      "items": [
+        { "name": "سمك مشوي", "quantity": 1, "unitPrice": 6000 },
+        { "name": "رز بخاري", "quantity": 1, "unitPrice": 2000 },
+        { "name": "خبز تنور", "quantity": 2, "unitPrice": 500 }
+      ],
+      "stages": [
+        { "status": "received", "completedAt": "2026-11-25T07:55:00+03:00" },
+        { "status": "preparing", "completedAt": "2026-11-25T08:02:00+03:00" },
+        { "status": "onTheWay", "completedAt": "2026-11-25T08:31:00+03:00" },
+        { "status": "delivered", "completedAt": null }
+      ]
+    },
+    {
+      "id": "WS-10490",
+      "createdAt": "2026-11-25T09:20:00+03:00",
+      "total": 5200,
+      "status": "received",
+      "address": "تعز، شارع جمال، مقابل صيدلية الحياة",
+      "items": [
+        { "name": "فتة موز بالعسل", "quantity": 2, "unitPrice": 2000 },
+        { "name": "شاهي عدني", "quantity": 3, "unitPrice": 400 }
+      ],
+      "stages": [
+        { "status": "received", "completedAt": "2026-11-25T09:20:00+03:00" },
+        { "status": "preparing", "completedAt": null },
+        { "status": "onTheWay", "completedAt": null },
+        { "status": "delivered", "completedAt": null }
+      ]
+    },
+    {
+      "id": "WS-10455",
+      "createdAt": "2026-11-23T19:10:00+03:00",
+      "total": 18000,
+      "status": "delivered",
+      "address": "الحديدة، شارع صنعاء، حي الصفا، منزل رقم 7",
+      "items": [
+        { "name": "مشاوي مشكلة", "quantity": 1, "unitPrice": 12000 },
+        { "name": "حمّص", "quantity": 2, "unitPrice": 1500 },
+        { "name": "مشروب غازي", "quantity": 3, "unitPrice": 1000 }
+      ],
+      "stages": [
+        { "status": "received", "completedAt": "2026-11-23T19:10:00+03:00" },
+        { "status": "preparing", "completedAt": "2026-11-23T19:18:00+03:00" },
+        { "status": "onTheWay", "completedAt": "2026-11-23T19:55:00+03:00" },
+        { "status": "delivered", "completedAt": "2026-11-23T20:21:00+03:00" }
+      ]
+    },
+    {
+      "id": "WS-10432",
+      "createdAt": "2026-11-22T13:05:00+03:00",
+      "total": 7500,
+      "status": "cancelled",
+      "address": "المكلا، الديس، شارع الجامع، جوار محلات الذهب",
+      "items": [
+        { "name": "برياني دجاج", "quantity": 1, "unitPrice": 3500 },
+        { "name": "لبن", "quantity": 2, "unitPrice": 500 },
+        { "name": "كنافة", "quantity": 2, "unitPrice": 1500 }
+      ],
+      "stages": [
+        { "status": "received", "completedAt": "2026-11-22T13:05:00+03:00" },
+        { "status": "preparing", "completedAt": null },
+        { "status": "onTheWay", "completedAt": null },
+        { "status": "delivered", "completedAt": null }
+      ]
+    },
+    {
+      "id": "WS-10398",
+      "createdAt": "2026-11-20T21:30:00+03:00",
+      "total": 11000,
+      "status": "delivered",
+      "address": "إب، شارع تعز، حي الجامعة، عمارة النور",
+      "items": [
+        { "name": "سلتة", "quantity": 2, "unitPrice": 3000 },
+        { "name": "عصيد", "quantity": 1, "unitPrice": 2500 },
+        { "name": "زبادي", "quantity": 5, "unitPrice": 500 }
+      ],
+      "stages": [
+        { "status": "received", "completedAt": "2026-11-20T21:30:00+03:00" },
+        { "status": "preparing", "completedAt": "2026-11-20T21:36:00+03:00" },
+        { "status": "onTheWay", "completedAt": "2026-11-20T22:04:00+03:00" },
+        { "status": "delivered", "completedAt": "2026-11-20T22:29:00+03:00" }
+      ]
+    }
+  ]
+}
