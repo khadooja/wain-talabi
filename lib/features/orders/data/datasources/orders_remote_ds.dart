@@ -1,8 +1,6 @@
 import 'package:dio/dio.dart';
 import '../models/order_model.dart';
 import '../models/orders_codec.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import '../../../../core/errors/app_exception.dart';
 import '../../../../core/constants/app_constants.dart';
 
