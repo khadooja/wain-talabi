@@ -19,7 +19,7 @@ class OrdersRepositoryImpl implements OrdersRepository {
   @override
   Future<OrdersSnapshot> getOrders() async {
     try {
-      final orders = await _remote.fetchOrders();
+      final orders = _newestFirst(await _remote.fetchOrders());
       final now = DateTime.now();
       await _saveQuietly(orders, now);
       return OrdersSnapshot(orders: orders, isStale: false, lastUpdated: now);
@@ -27,7 +27,7 @@ class OrdersRepositoryImpl implements OrdersRepository {
       final cached = await _local.read();
       if (cached != null) {
         return OrdersSnapshot(
-          orders: cached.orders,
+          orders: _newestFirst(cached.orders),
           isStale: true,
           lastUpdated: cached.savedAt,
         );
@@ -36,6 +36,10 @@ class OrdersRepositoryImpl implements OrdersRepository {
       rethrow;
     }
   }
+
+  /// الأحدث أولًا: قاعدة عرض للزبون، وتنطبق على الشبكة والكاش.
+  List<OrderModel> _newestFirst(List<OrderModel> orders) =>
+      [...orders]..sort((a, b) => b.createdAt.compareTo(a.createdAt));
 
   /// فشل الحفظ ما لازم يخرّب عرض بيانات جات سليمة.
   Future<void> _saveQuietly(List<OrderModel> orders, DateTime at) async {
